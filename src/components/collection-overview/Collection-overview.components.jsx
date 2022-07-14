@@ -9,9 +9,8 @@ const CollectionOverview =( { collections }) => {
   console.log(collections);
   return (
     <div className="collection-overview">
-        {collections.map(data =>(
-      <Preview key={data.id} {...data} />
-    ))}
+        {collections.map(data =>
+      <Preview key={data.id} {...data} />)}
     </div>
 )
         }
