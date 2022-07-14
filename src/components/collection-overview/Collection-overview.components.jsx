@@ -6,7 +6,7 @@ import { createStructuredSelector } from "reselect";
 import { selectCollections } from "../../reduxs/shop/shop.selector";
 
 const CollectionOverview =( { collections }) => {
-  collections.map(data=>console.log(data.id))
+  collections.forEach(data=>console.log(data.id))
   return (
     <div className="collection-overview">
         {collections.forEach(data =>{
