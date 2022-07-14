@@ -2,10 +2,7 @@ import React from "react";
 import "./preview-collection.styles.scss";
 import CollectioinItem from "./../collectioin-item/collectioin-item.component";
 
-const Preview = ({data}) => {
-  console.log(data);
-  const {title , items} = data;
-  console.log({title},{items});
+const Preview = ({title , items}) => {
   return (
     <div className="collection-preview">
       <h1 className="title">{title.toUpperCase()}</h1>
