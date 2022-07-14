@@ -17,7 +17,8 @@ import { currentUserSelector } from "./reduxs/user/user.selectors";
 import { Error } from "./pages/Error/Error.component";
 
 class App extends React.Component {
-  unsubscriptionFromAuth = null;
+  unsubscribeFromAuth = null;
+
   componentDidMount() {
     const { setCurrentUser } = this.props;
     const {currentUser} = this.props;
@@ -38,7 +39,7 @@ class App extends React.Component {
   }
 
   componentWillUnmount() {
-    this.unsubscriptionFromAuth();
+    this.unsubscribeFromAuth();
   }
   render() {
     return (
