@@ -16,7 +16,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   console.log('step 2');
   if (!userAuth) return;///true better for us
 
-  const userRef = firestore.doc(`users/${userAuth.uid}`);
+  const userRef = firestore.doc(`users/${userAuth.uid}`);///DocumentRefrence
   console.log(userRef);
   const snapShot = await userRef.get();
   console.log(snapShot);
@@ -40,6 +40,10 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 
 firebase.initializeApp(config);
 
+export const addCollectionAndDocuments = (collectionKey , objectsToAdd) => {
+  const collectionsRef = firestore.collection(collectionKey)
+  console.log(collectionsRef);
+}
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
